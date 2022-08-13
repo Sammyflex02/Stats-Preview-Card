@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: hsl(233, 47%, 7%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.container{
+    display: flex;
+    background: hsl(244, 38%, 16%);
+    border-bottom-left-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    font-family: 'Inter', sans-serif;
+}
+.image{
+    background-image: url(/image-header-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 28rem;
+    border-bottom-right-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    position: relative;
+}
+
+
+.image::after{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(277, 64%, 61%);
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.all-texts{
+    width: 24rem;
+    padding: 4rem 2rem;
+    margin: 0 3.5rem 0 2rem;
+}
+.records{
+    display: flex;
+    gap: 2.5rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Lexend Deca', sans-serif;
+}
+.just-insight{
+    color: hsl(277, 64%, 61%);
+}
+.text-one{
+    margin-bottom: 1.5rem;
+    color: hsl(0, 0%, 100%);
+    font-family: 'Lexend Deca', sans-serif;
+}
+.text-two{
+    margin-bottom: 3rem;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.5rem;
+}
+.record-two{
+   color: hsla(0, 0%, 100%, 0.75);
+}
+@media screen and  (max-width: 600px){
+    .container{
+        display: block;
+       flex: 0.5;     
+    }
+}    
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+    body {
+        font-size: 12px;
+    }
+
+    .all-texts {
+        padding: 12%;
+    }
+
+    .text-one{
+        font-size: 22px;
+    }
+
+    .records{
+        padding-top: 5rem;
+    }
+
+    .record-two {
+        font-size: 17px;
+    }
+    .image{
+        background-image: url(/image-header-mobile.jpg);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .image {
+        order: -1;
+    }
+
+    .all-texts {
+        padding: 12% 8%;
+    }
+
+    .text-one {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .records {
+        flex-direction: column;
+        padding-top: 4rem;
+    }
+
+    .records{
+        margin-top: 2rem;
+    }
+    .image{
+        background-image: url(/image-header-mobile.jpg);
+    }
+}   
