@@ -22,7 +22,7 @@ body{
     font-family: 'Inter', sans-serif;
 }
 .image{
-    background-image: url(/images/image-header-desktop.jpg);
+    background-image: url(./images/image-header-desktop.jpg);
     background-size: cover;
     background-position: center;
     width: 28rem;
